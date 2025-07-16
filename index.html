@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="header__title">My Image Gallery</h1>
+        <p class="header__subtitle">Upload and view your images in a beautiful dark interface</p>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+        <div class="upload-container">
+            <input type="file" id="imageUpload" accept="image/*" multiple class="upload-input" aria-label="Upload images">
+            <label for="imageUpload" class="upload-button" tabindex="0" role="button" aria-label="Click to upload images">
+                <img src="assets/upload-icon.svg" alt="Upload icon" class="upload-icon">
+                <span class="upload-text">Upload Images</span>
+            </label>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <main class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Uploaded images will be dynamically inserted here -->
+            </div>
+            <div class="empty-state" id="emptyState">
+                <h3>No images uploaded yet</h3>
+                <p>Click the upload button above to add your first image</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal/Lightbox -->
+    <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose" aria-label="Close image viewer">
+                <img src="assets/close-icon.svg" alt="Close icon">
+            </button>
+            <img src="" alt="" class="modal__image" id="modalImage">
+            <div class="modal__info">
+                <p class="modal__filename" id="modalFilename"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 My Image Gallery. Created with ❤️ by Developer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
