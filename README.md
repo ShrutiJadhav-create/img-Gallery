@@ -24,7 +24,7 @@ A **responsive, dark-themed Image Gallery web project** built using **HTML, CSS,
 - **GSAP / Anime.js** – Smooth animations.
 
 ---
-live link()
+live link(https://img-gallery-weld.vercel.app/)
 
 ## 🗂️ Folder Structure
 index.html
